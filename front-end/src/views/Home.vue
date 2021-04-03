@@ -20,9 +20,9 @@
 
         We have developed methods of automatically learning audio environments
         and detecting anomalies including intrusion, sickness, equipment
-        failures, and changes in chicken behavior.  AudioT monitoring technology
-        performs continuous listening to your flocks, providing peace of mind
-        and a record of the flock performance.
+        failures, and changes in chicken behavior.&nbsp; AudioT monitoring
+        technology performs continuous listening to your flocks, providing peace
+        of mind and a record of the flock performance.
       </p>
     </aside>
 
