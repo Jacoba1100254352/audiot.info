@@ -44,7 +44,7 @@
 				</article> -->
 
       <article class="article_2" id="projects">
-        <h2><a href="courses.html">Projects</a></h2>
+        <h2><router-link to="/projects">Projects</router-link></h2>
         <br />
 
         <p>

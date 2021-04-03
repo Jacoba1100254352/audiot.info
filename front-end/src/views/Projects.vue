@@ -74,33 +74,19 @@
       </article>
 
       <article class="article_2">
-        <h2><a href="#">Courses Taught</a></h2>
+        <h2><a href="#">Header</a></h2>
         <br />
         <ul>
           <li>
-            <h4>
-              Current Courses
-              <!-- Currently Taught -->
-            </h4>
+            <h4>Title</h4>
             <ul>
-              <li><a href="#">ECE 6254</a></li>
+              <li><a href="#"></a></li>
             </ul>
           </li>
           <li>
-            <h4>
-              Previous Courses
-              <!-- Previously Taught -->
-            </h4>
+            <h4>Title</h4>
             <ul>
-              <li><a href="#">ECE 4270</a></li>
-              <li><a href="#">ECE 4271</a></li>
-              <li><a href="#">ECE 2026</a></li>
-              <li><a href="#">ECE 3055</a></li>
-              <li><a href="#">ECE 6250</a></li>
-              <li><a href="#">ECE 6253</a></li>
-              <li><a href="#">ECE 6271</a></li>
-              <li><a href="#">ECE 7252</a></li>
-              <li><a href="#">ECE 2030</a></li>
+              <li><a href="#"></a></li>
             </ul>
           </li>
         </ul>

@@ -16,9 +16,9 @@
       <nav class="all_caps" id="main_nav">
         <ul class="semantic_list">
           <!-- <li><a href="index.html">Home</a></li> -->
-          <li><a href="#welcome">Welcome</a></li>
+          <li><router-link to="/">Home</router-link></li>
           <li><a href="#news">News</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><router-link to="/projects">Projects</router-link></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -139,28 +139,16 @@ table {
   box-sizing: border-box;
 }
 
-html {
-  min-height: 100%;
-  /* min-width: 100%; */
-  width: 90em;
-}
-
 body {
   /* background-image: linear-gradient( rgb( 165, 165, 165), rgb( 160, 160, 160)); */
   /* background-color: white; */
-  position: relative;
-  min-width: 960px;
-
   background-color: rgb(227, 226, 224);
+
   font-family: sans-serif;
   --size_adjustment: 1;
   --header_height: calc(200px * var(--size_adjustment));
   --name_plate_height: calc(2.5 * var(--size_adjustment));
   --nav_height: calc((50 / 12) * var(--size_adjustment));
-
-  min-width: 700px;
-  max-width: 1800px;
-  max-height: 720px;
 }
 
 .flexbox_container {
@@ -196,9 +184,8 @@ header img {
   height: var(--header_height);
 }
 
-/*  */
 header img {
-  /*background-image: url("../../Images/Chicken-farm-3.jpg");*/
+  background-image: url("../public/Images/Chicken-farm-3.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 30%;
@@ -212,12 +199,18 @@ header img {
   height: 50%;
   text-align: center;
   float: right;
+  padding-right: 1%;
+  padding-left: 1%;
 }
 
 #AudioT_name_plate {
   line-height: var(--name_plate_height);
   font-size: 50px;
 }
+
+/*****************
+*   Navigation   *
+*****************/
 
 #main_nav {
   font-size: 23px;
@@ -236,108 +229,48 @@ header img {
   transition-delay: 0s;
   transition-timing-function: ease;
 }
+
 #main_nav a:link,
 #main_nav a:visited,
 #main_nav a:focus {
   /* background: rgb( 80, 81, 79 ); */
 }
+
 #main_nav a:hover {
   transform: scale(1.1, 1.1); /* background: rgb( 39, 45, 45 ); */
 }
+
 /* #main_nav a:active{ background: rgb( 39, 45, 45 ); } */
-
-/*** Sub Menu ***/
-
-nav li ul {
-  position: absolute;
-  display: none;
-  padding-top: 1px;
-  width: 14%; /*As a default*/
-  width: calc(14% + 1px);
-  transform: translateX(-1px);
-}
-
-nav li:hover ul {
-  display: block;
-  z-index: 1;
-}
-
-nav li ul li {
-  border: 1px solid black;
-  border-top: none;
-  clear: both;
-}
 
 /**************
 *   Section   *
 **************/
 
 section {
-  margin: 1rem;
-  margin-bottom: 2%;
-  height: 30.5rem;
-  /*min-height: 30.5rem;*/
-  min-width: 640px;
-  height: auto;
+  margin: 1rem 1rem 2%;
 }
+
 section > div.flexbox_container li {
-  padding: 2.5px;
-  padding-left: 40px;
+  padding: 3px 3px 3px 40px;
 }
 
 h2 {
   font-size: 20px;
   text-align: center;
 }
+
 h3 {
   font-size: 19px;
   text-align: center;
 }
+
 h4 {
   text-align: left;
   font-weight: bold;
 }
+
 p {
   text-align: justify;
-}
-
-/*****************
-*   Navigation   *
-*****************/
-
-nav.local {
-  position: relative;
-  margin-top: 2%;
-}
-nav.local li {
-  width: calc(100% / 8);
-}
-nav.local a {
-  color: black;
-  display: block;
-  padding: 3%;
-}
-
-ul.flexbox_container {
-  flex-wrap: nowrap;
-}
-li.pseudo_element {
-  outline: 1px solid;
-} /* had a background color, why? */
-#pseudo_list li {
-  min-width: 80px;
-}
-#pseudo_list {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-#real_list,
-#real_list li {
-  text-align: center;
-  align-items: center;
-  z-index: 1;
 }
 
 /************
@@ -352,8 +285,6 @@ article {
   background-color: white;
 }
 
-/* aside h2{ font-weight: bold; } */
-
 /**************
 *   Article   *
 **************/
@@ -361,40 +292,18 @@ article {
 article {
   width: 100%;
 } /* 49% to be on top of eachother */
+
 article li {
   list-style-position: inside;
 }
+
 article > ul {
   list-style-type: disc;
 }
+
 section.index_section article a {
   color: black;
   text-decoration: none;
-}
-
-/*   ECE 6254 Specifications   */
-
-section > div > div {
-  order: 8;
-  margin-top: 1.1%;
-  width: 49%;
-}
-section > div > div > article {
-  width: 100%;
-}
-article.article_exam {
-  margin-top: 4.2%; /*align-self: flex-end;*/
-}
-article.article_homework ul ul li {
-  padding-left: 100px;
-}
-article.article_homework > ul > li {
-  list-style-type: none;
-}
-/*article.article_schedule>ul{ font-weight: bold; }*/
-
-span.red {
-  color: rgb(220, 25, 0);
 }
 
 /*************
@@ -406,12 +315,11 @@ footer {
   position: fixed;
   bottom: 0;
   color: white;
-  flex-flow: row nowrap;
+  flex-wrap: nowrap;
   padding-top: 10px;
   text-align: center;
   height: 6rem;
   width: 100%;
-  min-width: 43.75rem;
   background-color: rgb(160, 160, 160);
 }
 
