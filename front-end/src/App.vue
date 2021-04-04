@@ -161,6 +161,10 @@ body {
   text-transform: uppercase;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /**************
 *   Heading   *
 **************/
